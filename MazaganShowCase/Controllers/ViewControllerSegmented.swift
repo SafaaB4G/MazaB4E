@@ -59,6 +59,9 @@ class ViewControllerSegmented: UIViewController ,UITableViewDataSource, UITableV
         let displayHeight: CGFloat = self.view.frame.height
         
         myTableView = UITableView(frame: CGRect(x: 0, y: segmentedControl.frame.origin.y + 60 , width: displayWidth, height: displayHeight - barHeight))
+        
+        
+        
         //myTableView.register(UITableViewCell.self, forCellReuseIdentifier: "MyCell")
         myTableView.dataSource = self
         myTableView.delegate = self
@@ -68,6 +71,7 @@ class ViewControllerSegmented: UIViewController ,UITableViewDataSource, UITableV
     // to be conformed to the protocol
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        print("the text is here \(indexPath)")
     
     }
     
@@ -77,14 +81,44 @@ class ViewControllerSegmented: UIViewController ,UITableViewDataSource, UITableV
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
-        let cell = Bundle.main.loadNibNamed("TableViewCell", owner: self, options: nil)?.first as! TableViewCell
+        // start creating cells 
+        if Arraydata[indexPath.row].cell == 1 {
+            
+            let cell = Bundle.main.loadNibNamed("TableViewCell", owner: self, options: nil)?.first as! TableViewCell
+            
+            cell.ImageView.image = Arraydata[indexPath.row].image
+            cell.LabelView.text = Arraydata[indexPath.row].text
+            
+            return cell
+            
+            
+        } else  if Arraydata[indexPath.row].cell == 2 {
+            
+            let cell = Bundle.main.loadNibNamed("TableViewCell", owner: self, options: nil)?.first as! TableViewCell
+            
+            cell.ImageView.image = Arraydata[indexPath.row].image
+            cell.LabelView.text = Arraydata[indexPath.row].text
+            
+            return cell
+            
+            
+        } else {
+            
+            let cell = Bundle.main.loadNibNamed("TableViewCell1", owner: self, options: nil)?.first as! TableViewCell
+            
+            cell.ImageView.image = Arraydata[indexPath.row].image
+            cell.LabelView.text = Arraydata[indexPath.row].text
+            
+            return cell
+            
+            
+        }
         
-        imageView.frame = rect
-        cell.imageView?.image = Arraydata[indexPath.row].image
-        cell.LabelView.text = "My text is here"
-        
-        return cell
     }
+    
+    
+    //===== end pilling
+    
 //the end of comforming
     
     
