@@ -10,8 +10,8 @@ import UIKit
 import SideMenu
 
 class ViewController: UIViewController {
-
     
+
     fileprivate var selectedIndex = 0
     fileprivate var transitionPoint: CGPoint!
     fileprivate var contentType: ContentType = .Music
@@ -35,6 +35,8 @@ class ViewController: UIViewController {
             super.prepare(for: segue, sender: sender)
         }
     }
+    
+   
 }
 
     extension ViewController: MenuViewControllerDelegate {
@@ -81,3 +83,5 @@ class ViewController: UIViewController {
             return MenuTransitionAnimator(mode: .dismissal)
         }
 }
+
+
