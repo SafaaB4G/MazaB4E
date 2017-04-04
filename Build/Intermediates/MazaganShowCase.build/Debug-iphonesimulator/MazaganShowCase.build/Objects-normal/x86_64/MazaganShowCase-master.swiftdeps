@@ -1,0 +1,13 @@
+version: "Apple Swift version 3.1 (swiftlang-802.0.48 clang-802.0.38)"
+options: "8649b1deabed37e89da60b67c731c954"
+build_time: [544620919, 745205000]
+inputs:
+  "/Users/nabil/Desktop/Vinci/PFE/MazaganShowCase 2/MazaganShowCase/Controllers/ContentViewController.swift": [540142676, 0]
+  "/Users/nabil/Desktop/Vinci/PFE/MazaganShowCase 2/MazaganShowCase/Misc/CircularRevealAnimator.swift": [540133802, 0]
+  "/Users/nabil/Desktop/Vinci/PFE/MazaganShowCase 2/MazaganShowCase/Misc/CircularRevealTransitionAnimator.swift": [540133749, 0]
+  "/Users/nabil/Desktop/Vinci/PFE/MazaganShowCase 2/MazaganShowCase/Controllers/ViewController.swift": [544542402, 0]
+  "/Users/nabil/Desktop/Vinci/PFE/MazaganShowCase 2/MazaganShowCase/Model/ContentType.swift": [540133174, 0]
+  "/Users/nabil/Desktop/Vinci/PFE/MazaganShowCase 2/MazaganShowCase/Misc/AnimationDelegate.swift": [540133843, 0]
+  "/Users/nabil/Desktop/Vinci/PFE/MazaganShowCase 2/MazaganShowCase/AppDelegate.swift": [544538901, 0]
+  "/Users/nabil/Desktop/Vinci/PFE/MazaganShowCase 2/MazaganShowCase/Controllers/ViewControllerSegmented.swift": [544620719, 0]
+  "/Users/nabil/Desktop/Vinci/PFE/MazaganShowCase 2/MazaganShowCase/Controllers/MenuViewController.swift": [540142798, 0]

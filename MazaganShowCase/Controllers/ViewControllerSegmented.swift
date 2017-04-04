@@ -9,18 +9,14 @@
 import Foundation
 import UIKit
 import SJFluidSegmentedControl
-struct cellData {
-    let cell : Int!
-    let text : String!
-    let image : UIImage!
-}
+
 class ViewControllerSegmented: UIViewController ,UITableViewDataSource, UITableViewDelegate{
     
     // MARK: - Outlets
     
     @IBOutlet weak var segmentedControl: SJFluidSegmentedControl!
     // MARK: - View Lifecycle
-    var Arraydata = [cellData]()
+    private let Array: NSArray = ["First","Second","Third"]
     
     let imageView = UIImageView(image: UIImage(named: "logoMazagan")!)
     
@@ -33,15 +29,7 @@ class ViewControllerSegmented: UIViewController ,UITableViewDataSource, UITableV
     override func viewDidLoad() {
         super.viewDidLoad()
 
- ////cell data 
-        
-        let image : UIImage = UIImage(named : "logoMazagan")!;
-        
-        Arraydata = [cellData(cell : 1 , text : "dwcewcwec", image : image),
-                     cellData(cell : 2 , text : "dwcewewbgvfecacwec", image : image),
-                     cellData(cell : 3 , text : "dwcewcrthy6jhe54grwec", image :image )]
-        
-        
+
         if #available(iOS 8.2, *) {
             segmentedControl.textFont = .systemFont(ofSize: 16, weight: UIFontWeightSemibold)
         } else {
@@ -59,10 +47,7 @@ class ViewControllerSegmented: UIViewController ,UITableViewDataSource, UITableV
         let displayHeight: CGFloat = self.view.frame.height
         
         myTableView = UITableView(frame: CGRect(x: 0, y: segmentedControl.frame.origin.y + 60 , width: displayWidth, height: displayHeight - barHeight))
-        
-        
-        
-        //myTableView.register(UITableViewCell.self, forCellReuseIdentifier: "MyCell")
+        myTableView.register(UITableViewCell.self, forCellReuseIdentifier: "MyCell")
         myTableView.dataSource = self
         myTableView.delegate = self
         self.view.addSubview(myTableView)
@@ -71,57 +56,23 @@ class ViewControllerSegmented: UIViewController ,UITableViewDataSource, UITableV
     // to be conformed to the protocol
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        print("the text is here \(indexPath)")
-    
+        print("Num: \(indexPath.row)")
+        print("Value: \(Array[indexPath.row])")
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return Arraydata.count
+        return Array.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "MyCell", for: indexPath as IndexPath)
+        imageView.frame = rect
+        cell.imageView?.image = imageView.image
+        cell.textLabel?.text = "Pool View Room"
         
-        // start creating cells 
-        if Arraydata[indexPath.row].cell == 1 {
-            
-            let cell = Bundle.main.loadNibNamed("TableViewCell", owner: self, options: nil)?.first as! TableViewCell
-            
-            cell.ImageView.image = Arraydata[indexPath.row].image
-            cell.LabelView.text = Arraydata[indexPath.row].text
-            
-            return cell
-            
-            
-        } else  if Arraydata[indexPath.row].cell == 2 {
-            
-            let cell = Bundle.main.loadNibNamed("TableViewCell", owner: self, options: nil)?.first as! TableViewCell
-            
-            cell.ImageView.image = Arraydata[indexPath.row].image
-            cell.LabelView.text = Arraydata[indexPath.row].text
-            
-            return cell
-            
-            
-        } else {
-            
-            let cell = Bundle.main.loadNibNamed("TableViewCell1", owner: self, options: nil)?.first as! TableViewCell
-            
-            cell.ImageView.image = Arraydata[indexPath.row].image
-            cell.LabelView.text = Arraydata[indexPath.row].text
-            
-            return cell
-            
-            
-        }
-        
+        return cell
     }
-    
-    
-    //===== end pilling
-    
-//the end of comforming
-    
-    
+
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
                 

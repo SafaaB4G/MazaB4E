@@ -1,0 +1,7 @@
+version: "Apple Swift version 3.1 (swiftlang-802.0.48 clang-802.0.38)"
+options: "1d09a4bb6a52741aa725e3519e963e0b"
+build_time: [544552842, 101947000]
+inputs:
+  "/Users/nabil/Desktop/Vinci/PFE/MazaganShowCase 2/Pods/SJFluidSegmentedControl/SJFluidSegmentedControl/Classes/SJFluidSegmentedControl.swift": [544536722, 0]
+  "/Users/nabil/Desktop/Vinci/PFE/MazaganShowCase 2/Pods/SJFluidSegmentedControl/SJFluidSegmentedControl/Classes/SJGradientView.swift": [544536722, 0]
+  "/Users/nabil/Desktop/Vinci/PFE/MazaganShowCase 2/Pods/SJFluidSegmentedControl/SJFluidSegmentedControl/Classes/UIView+Constraints.swift": [544536722, 0]

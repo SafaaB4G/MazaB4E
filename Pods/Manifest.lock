@@ -1,0 +1,15 @@
+PODS:
+  - SJFluidSegmentedControl (1.1.1)
+  - YALSideMenu (2.0.1)
+
+DEPENDENCIES:
+  - SJFluidSegmentedControl
+  - YALSideMenu
+
+SPEC CHECKSUMS:
+  SJFluidSegmentedControl: ff93f88dc097a0f4b9afd30a6cab6be0dadedf12
+  YALSideMenu: 4d6b90ea44dcdded18a99e46b676e4ad51d9c6bb
+
+PODFILE CHECKSUM: 6de618dd80910626c9a1ee33a43452da69f2316e
+
+COCOAPODS: 1.2.0
