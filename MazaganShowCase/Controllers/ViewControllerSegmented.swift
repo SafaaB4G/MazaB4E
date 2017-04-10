@@ -15,17 +15,15 @@ class ViewControllerSegmented: UIViewController ,UITableViewDataSource, UITableV
     // MARK: - Outlets
     
     @IBOutlet weak var segmentedControl: SJFluidSegmentedControl!
+    
+    @IBOutlet weak var scrollView: UIScrollView!
     // MARK: - View Lifecycle
     private let Array: NSArray = ["First","Second","Third"]
     
     let imageView = UIImageView(image: UIImage(named: "logoMazagan")!)
     
-    
     let rect:CGRect = CGRect( x: 0, y: 0 ,width: 1000, height : 80)
-    private var myTableView: UITableView!
 
-    
-    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -40,17 +38,39 @@ class ViewControllerSegmented: UIViewController ,UITableViewDataSource, UITableV
         
         segmentedControl.frame = segRect
         
+        let scrollRect:CGRect = CGRect(x: 0, y: segmentedControl.frame.origin.y + segmentedControl.frame.size.height, width: UIScreen.main.bounds.size.width, height: UIScreen.main.bounds.size.height - (segmentedControl.frame.origin.y + segmentedControl.frame.size.height))
         
+        scrollView.frame = scrollRect
         
         let barHeight: CGFloat = UIApplication.shared.statusBarFrame.size.height / 2
         let displayWidth: CGFloat = self.view.frame.width
         let displayHeight: CGFloat = self.view.frame.height
         
-        myTableView = UITableView(frame: CGRect(x: 0, y: segmentedControl.frame.origin.y + 60 , width: displayWidth, height: displayHeight - barHeight))
+        let myTableView:UITableView = UITableView(frame: CGRect(x: 0, y: 0 , width: displayWidth, height: displayHeight - barHeight))
         myTableView.register(UITableViewCell.self, forCellReuseIdentifier: "MyCell")
         myTableView.dataSource = self
         myTableView.delegate = self
-        self.view.addSubview(myTableView)
+        
+        myTableView.backgroundColor = UIColor.yellow
+        
+        let myTableView1:UITableView = UITableView(frame: CGRect(x: UIScreen.main.bounds.size.width, y: 0 , width: displayWidth, height: displayHeight - barHeight))
+        myTableView1.register(UITableViewCell.self, forCellReuseIdentifier: "MyCell")
+        myTableView1.dataSource = self
+        myTableView1.delegate = self
+        
+        myTableView1.backgroundColor = UIColor.orange
+        
+        let myTableView2:UITableView = UITableView(frame: CGRect(x: UIScreen.main.bounds.size.width * 2, y: 0 , width: displayWidth, height: displayHeight - barHeight))
+        myTableView2.register(UITableViewCell.self, forCellReuseIdentifier: "MyCell")
+        myTableView2.dataSource = self
+        myTableView2.delegate = self
+        
+        myTableView2.backgroundColor = UIColor.purple
+        
+        self.scrollView.addSubview(myTableView)
+        self.scrollView.addSubview(myTableView1)
+        self.scrollView.addSubview(myTableView2)
+        
     }
     
     // to be conformed to the protocol
@@ -93,12 +113,24 @@ extension ViewControllerSegmented: SJFluidSegmentedControlDataSource {
     
     func segmentedControl(_ segmentedControl: SJFluidSegmentedControl,
                           titleForSegmentAtIndex index: Int) -> String? {
+        
         if index == 0 {
             return "Chambre".uppercased()
         } else if index == 1 {
             return "Suite".uppercased()
         }
         return "Villa".uppercased()
+    }
+    
+    
+    func segmentedControl(_ segmentedControl: SJFluidSegmentedControl, didChangeFromSegmentAtIndex fromIndex: Int, toSegmentAtIndex toIndex: Int) {
+        
+        let offset:CGFloat = UIScreen.main.bounds.size.width * CGFloat(toIndex - fromIndex);
+        
+        scrollView.contentOffset.x += offset
+        
+//        self.segmentedControl(segmentedControl, didScrollWithXOffset:offset)
+        
     }
     
     func segmentedControl(_ segmentedControl: SJFluidSegmentedControl,
@@ -137,6 +169,9 @@ extension ViewControllerSegmented: SJFluidSegmentedControlDelegate {
     
     func segmentedControl(_ segmentedControl: SJFluidSegmentedControl, didScrollWithXOffset offset: CGFloat) {
         
+        print("Scrolling offset: \(offset)")
+        
+//        scrollView.contentOffset.x += offset
     }
     
 }
