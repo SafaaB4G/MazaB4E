@@ -1,15 +1,21 @@
 PODS:
+  - ActionButton (0.1.5)
   - SJFluidSegmentedControl (1.1.1)
+  - SKPhotoBrowser (4.0.1)
   - YALSideMenu (2.0.1)
 
 DEPENDENCIES:
+  - ActionButton
   - SJFluidSegmentedControl
+  - SKPhotoBrowser
   - YALSideMenu
 
 SPEC CHECKSUMS:
+  ActionButton: a71147de5a83b6d8d8e18464b216904ba7821677
   SJFluidSegmentedControl: ff93f88dc097a0f4b9afd30a6cab6be0dadedf12
+  SKPhotoBrowser: 3a7c6fc02aa1620ab17253a47a49fafda46536e8
   YALSideMenu: 4d6b90ea44dcdded18a99e46b676e4ad51d9c6bb
 
-PODFILE CHECKSUM: 6de618dd80910626c9a1ee33a43452da69f2316e
+PODFILE CHECKSUM: 40c75d9271aafaad31eac314be90568c9f100d24
 
-COCOAPODS: 1.2.0
+COCOAPODS: 1.2.1

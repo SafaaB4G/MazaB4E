@@ -9,4 +9,7 @@ target 'MazaganShowCase' do
 
     pod 'YALSideMenu'
     pod 'SJFluidSegmentedControl'
+    pod 'ActionButton'
+    pod 'SKPhotoBrowser'
+
 end

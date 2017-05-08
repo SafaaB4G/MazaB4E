@@ -3,11 +3,11 @@
   'case-sensitive': 'false',
   'roots': [{
     'type': 'directory',
-    'name': '/Users/nabil/Desktop/Vinci/PFE/MazaganShowCase 2/Build/Products/Debug-iphonesimulator/SJFluidSegmentedControl/SJFluidSegmentedControl.framework/Modules'
+    'name': '/Users/nabil/Downloads/TestGallery/Build/Products/Debug-iphonesimulator/SJFluidSegmentedControl/SJFluidSegmentedControl.framework/Modules'
     'contents': [{
       'type': 'file',
       'name': 'module.modulemap',
-      'external-contents': '/Users/nabil/Desktop/Vinci/PFE/MazaganShowCase 2/Build/Intermediates/Pods.build/Debug-iphonesimulator/SJFluidSegmentedControl.build/unextended-module.modulemap',
+      'external-contents': '/Users/nabil/Downloads/TestGallery/Build/Intermediates/Pods.build/Debug-iphonesimulator/SJFluidSegmentedControl.build/unextended-module.modulemap',
     }]
   }]
 }

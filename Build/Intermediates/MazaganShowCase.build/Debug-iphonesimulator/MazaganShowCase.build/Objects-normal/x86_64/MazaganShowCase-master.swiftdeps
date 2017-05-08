@@ -1,13 +1,20 @@
-version: "Apple Swift version 3.1 (swiftlang-802.0.48 clang-802.0.38)"
-options: "8649b1deabed37e89da60b67c731c954"
-build_time: [544620919, 745205000]
+version: "Apple Swift version 3.1 (swiftlang-802.0.53 clang-802.0.42)"
+options: "0637c15fbb8458d2dd04dbe4a0e4a26e"
+build_time: [547557941, 328118000]
 inputs:
-  "/Users/nabil/Desktop/Vinci/PFE/MazaganShowCase 2/MazaganShowCase/Controllers/ContentViewController.swift": [540142676, 0]
-  "/Users/nabil/Desktop/Vinci/PFE/MazaganShowCase 2/MazaganShowCase/Misc/CircularRevealAnimator.swift": [540133802, 0]
-  "/Users/nabil/Desktop/Vinci/PFE/MazaganShowCase 2/MazaganShowCase/Misc/CircularRevealTransitionAnimator.swift": [540133749, 0]
-  "/Users/nabil/Desktop/Vinci/PFE/MazaganShowCase 2/MazaganShowCase/Controllers/ViewController.swift": [544542402, 0]
-  "/Users/nabil/Desktop/Vinci/PFE/MazaganShowCase 2/MazaganShowCase/Model/ContentType.swift": [540133174, 0]
-  "/Users/nabil/Desktop/Vinci/PFE/MazaganShowCase 2/MazaganShowCase/Misc/AnimationDelegate.swift": [540133843, 0]
-  "/Users/nabil/Desktop/Vinci/PFE/MazaganShowCase 2/MazaganShowCase/AppDelegate.swift": [544538901, 0]
-  "/Users/nabil/Desktop/Vinci/PFE/MazaganShowCase 2/MazaganShowCase/Controllers/ViewControllerSegmented.swift": [544620719, 0]
-  "/Users/nabil/Desktop/Vinci/PFE/MazaganShowCase 2/MazaganShowCase/Controllers/MenuViewController.swift": [540142798, 0]
+  "/Users/nabil/Downloads/TestGallery/MazaganShowCase/Controllers/ContentViewController.swift": !dirty [546426805, 0]
+  "/Users/nabil/Downloads/TestGallery/MazaganShowCase/Controllers/EnfantController.swift": !dirty [547135068, 0]
+  "/Users/nabil/Downloads/TestGallery/MazaganShowCase/Misc/CircularRevealAnimator.swift": !dirty [546426805, 0]
+  "/Users/nabil/Downloads/TestGallery/MazaganShowCase/Misc/CircularRevealTransitionAnimator.swift": !dirty [546426805, 0]
+  "/Users/nabil/Downloads/TestGallery/MazaganShowCase/Controllers/ViewController.swift": !dirty [546451952, 0]
+  "/Users/nabil/Downloads/TestGallery/MazaganShowCase/Controllers/SpaController.swift": !dirty [547134581, 0]
+  "/Users/nabil/Downloads/TestGallery/MazaganShowCase/Model/ContentType.swift": !dirty [546426805, 0]
+  "/Users/nabil/Downloads/TestGallery/MazaganShowCase/Misc/AnimationDelegate.swift": !dirty [546426805, 0]
+  "/Users/nabil/Downloads/TestGallery/MazaganShowCase/AppDelegate.swift": !dirty [546426805, 0]
+  "/Users/nabil/Downloads/TestGallery/MazaganShowCase/Controllers/Utils.swift": !dirty [547133940, 0]
+  "/Users/nabil/Downloads/TestGallery/MazaganShowCase/Controllers/RestaurationView.swift": !dirty [547556433, 0]
+  "/Users/nabil/Downloads/TestGallery/MazaganShowCase/Controllers/ViewControllerSegmented.swift": !dirty [547135842, 0]
+  "/Users/nabil/Downloads/TestGallery/MazaganShowCase/Controllers/MenuViewController.swift": !dirty [546435848, 0]
+  "/Users/nabil/Downloads/TestGallery/MazaganShowCase/Controllers/HomePageController.swift": !dirty [547556435, 0]
+  "/Users/nabil/Downloads/TestGallery/MazaganShowCase/Controllers/ActiviteController.swift": !dirty [547322146, 0]
+  "/Users/nabil/Downloads/TestGallery/MazaganShowCase/Controllers/GolfController.swift": !dirty [547135885, 0]

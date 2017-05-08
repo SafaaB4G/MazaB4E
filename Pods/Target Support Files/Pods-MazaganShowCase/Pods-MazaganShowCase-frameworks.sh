@@ -89,11 +89,15 @@ strip_invalid_archs() {
 
 
 if [[ "$CONFIGURATION" == "Debug" ]]; then
+  install_framework "$BUILT_PRODUCTS_DIR/ActionButton/ActionButton.framework"
   install_framework "$BUILT_PRODUCTS_DIR/SJFluidSegmentedControl/SJFluidSegmentedControl.framework"
+  install_framework "$BUILT_PRODUCTS_DIR/SKPhotoBrowser/SKPhotoBrowser.framework"
   install_framework "$BUILT_PRODUCTS_DIR/YALSideMenu/SideMenu.framework"
 fi
 if [[ "$CONFIGURATION" == "Release" ]]; then
+  install_framework "$BUILT_PRODUCTS_DIR/ActionButton/ActionButton.framework"
   install_framework "$BUILT_PRODUCTS_DIR/SJFluidSegmentedControl/SJFluidSegmentedControl.framework"
+  install_framework "$BUILT_PRODUCTS_DIR/SKPhotoBrowser/SKPhotoBrowser.framework"
   install_framework "$BUILT_PRODUCTS_DIR/YALSideMenu/SideMenu.framework"
 fi
 if [ "${COCOAPODS_PARALLEL_CODE_SIGN}" == "true" ]; then

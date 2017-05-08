@@ -6,7 +6,7 @@
 	<dict>
 		<key>Headers/SJFluidSegmentedControl-Swift.h</key>
 		<data>
-		7vx4ZuKq2G66rBiVf+6a776DZGQ=
+		dgvCn0VMW0BAG3nk8YcKtZFgY+0=
 		</data>
 		<key>Headers/SJFluidSegmentedControl-umbrella.h</key>
 		<data>
@@ -14,15 +14,15 @@
 		</data>
 		<key>Info.plist</key>
 		<data>
-		ARM9b2COLH5wXU8Q94lAxRRgRFc=
+		XXhwXaTgK2AH3YseHU/OsNDsCjE=
 		</data>
 		<key>Modules/SJFluidSegmentedControl.swiftmodule/x86_64.swiftdoc</key>
 		<data>
-		s3ydI1+NefVN3WVDfeFz3KbtvrA=
+		Ai8harS3hrIS06NX4m802lXC2g0=
 		</data>
 		<key>Modules/SJFluidSegmentedControl.swiftmodule/x86_64.swiftmodule</key>
 		<data>
-		l5RGdHVYI7rRlPv9j84VN/e4VDk=
+		LYuCmyejffCDYXKTtawGAkB18SE=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -35,11 +35,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			7vx4ZuKq2G66rBiVf+6a776DZGQ=
+			dgvCn0VMW0BAG3nk8YcKtZFgY+0=
 			</data>
 			<key>hash2</key>
 			<data>
-			/z0AN1gm6l9woq/gh431XGTNuUx9PzHbEJY1CtS/lqk=
+			w8GRG4s8xkZgi3mi4japKPt7xtlyuPKwk0tfZm+UXIg=
 			</data>
 		</dict>
 		<key>Headers/SJFluidSegmentedControl-umbrella.h</key>
@@ -57,22 +57,22 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			s3ydI1+NefVN3WVDfeFz3KbtvrA=
+			Ai8harS3hrIS06NX4m802lXC2g0=
 			</data>
 			<key>hash2</key>
 			<data>
-			y6RecUKiXDC8FfwTC41nIJdCgp+lzrjs0pURtddW1D4=
+			Aq6wAcd3PGUanbhKVYdXbiSgapIIzYeFnZHvVHYMDlw=
 			</data>
 		</dict>
 		<key>Modules/SJFluidSegmentedControl.swiftmodule/x86_64.swiftmodule</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			l5RGdHVYI7rRlPv9j84VN/e4VDk=
+			LYuCmyejffCDYXKTtawGAkB18SE=
 			</data>
 			<key>hash2</key>
 			<data>
-			/Lb7+sOizdMTYeIfixGgmx5m5mEcUZxm8L0A/3WigU0=
+			eKfsxYU1q1eBXNVOaziTeTNyShJrR4Cqz+/BTAggDwQ=
 			</data>
 		</dict>
 		<key>Modules/module.modulemap</key>
