@@ -1,178 +1,388 @@
-//
-//  ViewControllerSegmented.swift
-//  MazaganShowCase
-//
-//  Created by Nabil Sossey Alaoui on 4/3/17.
-//  Copyright © 2017 B4E. All rights reserved.
-//
 
-import Foundation
-import UIKit
-import SJFluidSegmentedControl
+    import Foundation
+    import UIKit
+    import SJFluidSegmentedControl
+    import ActionButton
 
-class ViewControllerSegmented: UIViewController ,UITableViewDataSource, UITableViewDelegate{
-    
-    // MARK: - Outlets
-    
-    @IBOutlet weak var segmentedControl: SJFluidSegmentedControl!
-    
-    @IBOutlet weak var scrollView: UIScrollView!
-    // MARK: - View Lifecycle
-    private let Array: NSArray = ["First","Second","Third"]
-    
-    let imageView = UIImageView(image: UIImage(named: "logoMazagan")!)
-    
-    let rect:CGRect = CGRect( x: 0, y: 0 ,width: 1000, height : 80)
+    class ViewControllerSegmented: UIViewController ,UITableViewDataSource, UITableViewDelegate{
+        
+        // MARK: - Outlets
+        
+        @IBOutlet weak var segmentedControl: SJFluidSegmentedControl!
+        
+        @IBOutlet weak var scrollView: UIScrollView!
+        var descriptinvilla : String? = nil
+        var actionButton: ActionButton!
 
-    override func viewDidLoad() {
-        super.viewDidLoad()
+        // MARK: - View Lifecycle
+        let imageView = UIImageView(image: UIImage(named: "logoMazagan")!)
+        let image1 = UIImageView(image: UIImage(named: "PoolViewRoom")!)
+        let image2 = UIImageView(image: UIImage(named: "PartialOceanViewRoom")!)
+        let image3 = UIImageView(image: UIImage(named: "OceanViewRoom")!)
+        let image4 = UIImageView(image: UIImage(named: "mazaganbeach")!)
 
-
-        if #available(iOS 8.2, *) {
-            segmentedControl.textFont = .systemFont(ofSize: 16, weight: UIFontWeightSemibold)
-        } else {
-            segmentedControl.textFont = .boldSystemFont(ofSize: 16)
+        
+        let rect:CGRect = CGRect( x: 0, y: 0 ,width: 1000, height : 80)
+        var myTableView:UITableView? = nil
+        var myTableView1:UITableView? = nil
+        var myView3:UIView? = nil
+        
+        override func viewDidLoad() {
+            super.viewDidLoad()
+            
+            
+            let resp = Utils.getSyncDataFromUrl(url: "http://www.beyond4edges.com/mazagan/MazaganWebService/public/index.php/Mazagan/GetDescription/villa", httpMethod: "GET", parameter: "") as! NSArray
+            if(resp != nil){
+            let villaMenu : NSDictionary = resp[0] as! NSDictionary
+            descriptinvilla = String (describing:villaMenu["description"])
+            
+            }
+            else{
+            descriptinvilla = "No data because no internet connection !!!!!"
+            }
+            
+            
+            print("test")
+            if #available(iOS 8.2, *) {
+                segmentedControl.textFont = .systemFont(ofSize: 16, weight: UIFontWeightSemibold)
+            } else {
+                segmentedControl.textFont = .boldSystemFont(ofSize: 16)
+            }
+            
+            let segRect:CGRect = CGRect(x: segmentedControl.frame.origin.x, y: segmentedControl.frame.origin.y, width: UIScreen.main.bounds.size.width - 40.0, height: 60)
+            
+            segmentedControl.frame = segRect
+            
+            
+            
+            let scrollRect:CGRect = CGRect(x: 0, y: segmentedControl.frame.origin.y + segmentedControl.frame.size.height, width: UIScreen.main.bounds.size.width, height: UIScreen.main.bounds.size.height - (segmentedControl.frame.origin.y + segmentedControl.frame.size.height))
+           
+            
+             let scrollRect2:CGRect = CGRect(x: 0, y: segmentedControl.frame.origin.y + segmentedControl.frame.size.height - 200, width: UIScreen.main.bounds.size.width, height: UIScreen.main.bounds.size.height - (segmentedControl.frame.origin.y + segmentedControl.frame.size.height))
+            scrollView.frame = scrollRect
+            
+            let barHeight: CGFloat = UIApplication.shared.statusBarFrame.size.height / 2
+            let displayWidth: CGFloat = self.view.frame.width
+            let displayHeight: CGFloat = self.view.frame.height
+            
+            myTableView = UITableView(frame: CGRect(x: 0, y: 0 , width: displayWidth, height: displayHeight - barHeight))
+            myTableView?.register(UITableViewCell.self, forCellReuseIdentifier: "MyCell")
+            myTableView?.dataSource = self
+            myTableView?.delegate = self
+            self.myTableView?.separatorColor = UIColor.clear
+            
+            myTableView?.backgroundColor = UIColor.yellow
+            
+            myTableView1 = UITableView(frame: CGRect(x: UIScreen.main.bounds.size.width, y: 0 , width: displayWidth, height: displayHeight - barHeight))
+            myTableView1?.register(UITableViewCell.self, forCellReuseIdentifier: "MyCell")
+            myTableView1?.dataSource = self
+            myTableView1?.delegate = self
+            myTableView1?.separatorColor = UIColor.clear
+            myTableView1?.backgroundColor = UIColor.orange
+            
+            myView3 = UIView(frame: CGRect(x: UIScreen.main.bounds.size.width * 2, y: 0 , width: displayWidth, height: displayHeight - barHeight))
+            
+//            let rectlabel : CGRect = CGRect(x:0 ,y :segmentedControl.frame.origin.y+segmentedControl.frame.height , width :displayWidth , height : displayHeight - barHeight )
+//            
+            //myView3?.backgroundColor = UIColor.purple
+            let label:UILabel = UILabel()
+            label.textColor = UIColor.black
+            label.backgroundColor = UIColor.brown
+            label.text = descriptinvilla
+            label.numberOfLines = 20
+            label.center = CGPoint(x: 300, y: 400)
+            label.textAlignment = .center
+            label.frame = scrollRect2
+            
+            self.myView3?.addSubview(label)
+            self.scrollView.addSubview(myTableView!)
+            self.scrollView.addSubview(myTableView1!)
+            self.scrollView.addSubview(myView3!)
+            
+            //the code of floating buttom
+            let twitterImage = UIImage(named: "logoMazagan")!
+            let plusImage = UIImage(named: "logoMazagan")!
+            
+            let twitter = ActionButtonItem(title: "Twitter", image: twitterImage)
+            
+            let google = ActionButtonItem(title: "Google Plus", image: plusImage)
+            google.action = { item in print("Google Plus...") }
+            
+            actionButton = ActionButton(attachedToView: self.view, items: [twitter, google])
+            actionButton.action = { button in button.toggleMenu() }
+            actionButton.setTitle("+", forState: UIControlState())
+            
+            actionButton.backgroundColor = UIColor(red: 238.0/255.0, green: 130.0/255.0, blue: 34.0/255.0, alpha:1.0)
+            
         }
- 
-        let segRect:CGRect = CGRect(x: segmentedControl.frame.origin.x, y: segmentedControl.frame.origin.y, width: UIScreen.main.bounds.size.width - 40.0, height: 60)
         
-        segmentedControl.frame = segRect
         
-        let scrollRect:CGRect = CGRect(x: 0, y: segmentedControl.frame.origin.y + segmentedControl.frame.size.height, width: UIScreen.main.bounds.size.width, height: UIScreen.main.bounds.size.height - (segmentedControl.frame.origin.y + segmentedControl.frame.size.height))
         
-        scrollView.frame = scrollRect
+        var actualTable : String? = nil
+        // to be conformed to the protocol
         
-        let barHeight: CGFloat = UIApplication.shared.statusBarFrame.size.height / 2
-        let displayWidth: CGFloat = self.view.frame.width
-        let displayHeight: CGFloat = self.view.frame.height
-        
-        let myTableView:UITableView = UITableView(frame: CGRect(x: 0, y: 0 , width: displayWidth, height: displayHeight - barHeight))
-        myTableView.register(UITableViewCell.self, forCellReuseIdentifier: "MyCell")
-        myTableView.dataSource = self
-        myTableView.delegate = self
-        
-        myTableView.backgroundColor = UIColor.yellow
-        
-        let myTableView1:UITableView = UITableView(frame: CGRect(x: UIScreen.main.bounds.size.width, y: 0 , width: displayWidth, height: displayHeight - barHeight))
-        myTableView1.register(UITableViewCell.self, forCellReuseIdentifier: "MyCell")
-        myTableView1.dataSource = self
-        myTableView1.delegate = self
-        
-        myTableView1.backgroundColor = UIColor.orange
-        
-        let myTableView2:UITableView = UITableView(frame: CGRect(x: UIScreen.main.bounds.size.width * 2, y: 0 , width: displayWidth, height: displayHeight - barHeight))
-        myTableView2.register(UITableViewCell.self, forCellReuseIdentifier: "MyCell")
-        myTableView2.dataSource = self
-        myTableView2.delegate = self
-        
-        myTableView2.backgroundColor = UIColor.purple
-        
-        self.scrollView.addSubview(myTableView)
-        self.scrollView.addSubview(myTableView1)
-        self.scrollView.addSubview(myTableView2)
-        
-    }
-    
-    // to be conformed to the protocol
-    
-    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        print("Num: \(indexPath.row)")
-        print("Value: \(Array[indexPath.row])")
-    }
-    
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return Array.count
-    }
-    
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "MyCell", for: indexPath as IndexPath)
-        imageView.frame = rect
-        cell.imageView?.image = imageView.image
-        cell.textLabel?.text = "Pool View Room"
-        
-        return cell
-    }
-
-    override func viewDidAppear(_ animated: Bool) {
-        super.viewDidAppear(animated)
+        func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+            print("Num: \(indexPath.row)")
+            print ("je suis dans : \(String(describing: actualTable))")
+            //print("Value: \(Array[indexPath.row])")
+           
+            let storyboard = UIStoryboard(name: "Main", bundle: Bundle.main)
+            let destination = storyboard.instantiateViewController(withIdentifier: "GalleryImage") as! GalleryImage
+            if (actualTable == "Chambre"){
+                switch indexPath.row {
+                case 0:
+                    destination.toPass = "http://beyond4edges.com/mazagan/MazaganWebService/public/index.php/Mazagan/GetPhoto/PoolViewRoom"
+                    //navigationController?.pushViewController(destination, animated: true)
+                    present(destination, animated: true, completion: nil)
+                    break
+                case 1:
+                    destination.toPass = "http://beyond4edges.com/mazagan/MazaganWebService/public/index.php/Mazagan/GetPhoto/PartialOceanViewRoom"
+                    navigationController?.pushViewController(destination, animated: true)
+                    break
+                case 2:
+                    destination.toPass = "http://beyond4edges.com/mazagan/MazaganWebService/public/index.php/Mazagan/GetPhoto/OceanViewRoom"
+                    navigationController?.pushViewController(destination, animated: true)
+                    break
+                case 3:
+                    navigationController?.pushViewController(destination, animated: true)
+                   destination.toPass = "http://beyond4edges.com/mazagan/MazaganWebService/public/index.php/Mazagan/GetPhoto/PrimeOceanViewRoom"
+                    break
                 
-        // Uncomment the following line to set the current segment programmatically.
-        // segmentedControl.currentSegment = 1
-    }
-    
+                    
+                default:
+                    print("nothing to do !!!")
+                }
+                
+            }
+                
+            if (actualTable == "Suite")
+            {
+                switch indexPath.row {
+                case 0:
+                    destination.toPass = "http://beyond4edges.com/mazagan/MazaganWebService/public/index.php/Mazagan/GetPhoto/OceanViewMazaganSuite"
+                    navigationController?.pushViewController(destination, animated: true)
+                    break
+                case 1:
+                     destination.toPass = "http://beyond4edges.com/mazagan/MazaganWebService/public/index.php/Mazagan/GetPhoto/PrimeOceanMazaganSuite"
+                    navigationController?.pushViewController(destination, animated: true)
+                    break
+                case 2:
+                    destination.toPass = "http://beyond4edges.com/mazagan/MazaganWebService/public/index.php/Mazagan/GetPhoto/ExecutiveSuite"
+                    navigationController?.pushViewController(destination, animated: true)
+                    break
+                case 3:
+                    destination.toPass = "http://beyond4edges.com/mazagan/MazaganWebService/public/index.php/Mazagan/GetPhoto/AmbassadorSuite"
+                    navigationController?.pushViewController(destination, animated: true)
+                    break
+                    
+                case 4:
+                    destination.toPass = "http://beyond4edges.com/mazagan/MazaganWebService/public/index.php/Mazagan/GetPhoto/RoyalSuite"
+                    navigationController?.pushViewController(destination, animated: true)
+                    break
 
-}
-
-// MARK: - SJFluidSegmentedControl Data Source Methods
-
-extension ViewControllerSegmented: SJFluidSegmentedControlDataSource {
-    
-    func numberOfSegmentsInSegmentedControl(_ segmentedControl: SJFluidSegmentedControl) -> Int {
-        return 3
-    }
-    
-    func segmentedControl(_ segmentedControl: SJFluidSegmentedControl,
-                          titleForSegmentAtIndex index: Int) -> String? {
-        
-        if index == 0 {
-            return "Chambre".uppercased()
-        } else if index == 1 {
-            return "Suite".uppercased()
+                default:
+                    print("nothing to do !!!")
+                }
+            
+            }
         }
-        return "Villa".uppercased()
-    }
-    
-    
-    func segmentedControl(_ segmentedControl: SJFluidSegmentedControl, didChangeFromSegmentAtIndex fromIndex: Int, toSegmentAtIndex toIndex: Int) {
         
-        let offset:CGFloat = UIScreen.main.bounds.size.width * CGFloat(toIndex - fromIndex);
-        
-        scrollView.contentOffset.x += offset
-        
-//        self.segmentedControl(segmentedControl, didScrollWithXOffset:offset)
-        
-    }
-    
-    func segmentedControl(_ segmentedControl: SJFluidSegmentedControl,
-                          gradientColorsForSelectedSegmentAtIndex index: Int) -> [UIColor] {
-        switch index {
-        case 0:
-            return [UIColor(red: 51 / 255.0, green: 149 / 255.0, blue: 182 / 255.0, alpha: 1.0),
-                    UIColor(red: 97 / 255.0, green: 199 / 255.0, blue: 234 / 255.0, alpha: 1.0)]
-        case 1:
-            return [UIColor(red: 227 / 255.0, green: 206 / 255.0, blue: 160 / 255.0, alpha: 1.0),
-                    UIColor(red: 225 / 255.0, green: 195 / 255.0, blue: 128 / 255.0, alpha: 1.0)]
-        case 2:
-            return [UIColor(red: 21 / 255.0, green: 94 / 255.0, blue: 119 / 255.0, alpha: 1.0),
-                    UIColor(red: 9 / 255.0, green: 82 / 255.0, blue: 107 / 255.0, alpha: 1.0)]
-        default:
-            break
+        func numberOfSections(in tableView: UITableView) -> Int {
+            
+            return 1
         }
-        return [.clear]
-    }
-    
-    func segmentedControl(_ segmentedControl: SJFluidSegmentedControl,
-                          gradientColorsForBounce bounce: SJFluidSegmentedControlBounce) -> [UIColor] {
-        switch bounce {
-        case .left:
-            return [UIColor(red: 51 / 255.0, green: 149 / 255.0, blue: 182 / 255.0, alpha: 1.0)]
-        case .right:
-            return [UIColor(red: 9 / 255.0, green: 82 / 255.0, blue: 107 / 255.0, alpha: 1.0)]
+        
+        func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+            
+            if (segmentedControl.currentSegment == 0){
+                actualTable = "Chambre"
+                print ("im in chambre")
+                
+                
+                return 4
+            }
+            if (segmentedControl.currentSegment == 1){
+                print ("im in suite")
+                actualTable = "Suite"
+
+                
+                return 5
+            }
+            
+            return 9
+            
         }
+        
+        
+        func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+            
+            let cell = tableView.dequeueReusableCell(withIdentifier: "MyCell", for: indexPath as IndexPath)
+            cell.textLabel?.font = UIFont.boldSystemFont(ofSize: 20)
+            cell.textLabel?.textColor = UIColor.blue
+            
+            if (segmentedControl.currentSegment == 0){
+                
+                
+                switch indexPath.row {
+                case 0:
+                    cell.textLabel?.text = "Pool View Room"
+                    cell.imageView?.image = image1.image
+                    image1.frame = rect
+                case 1:
+                    cell.textLabel?.text = "Partial Ocean View Room"
+                    image2.frame = rect
+
+                    cell.imageView?.image = image2.image
+
+
+                case 2:
+                    cell.textLabel?.text = "Ocean View Room"
+                    image3.frame = rect
+
+                    cell.imageView?.image = image3.image
+
+
+                case 3:
+                    cell.textLabel?.text = "Prime Ocean View Room"
+                    image4.frame = rect
+
+                    cell.imageView?.image = image4.image
+
+
+                default:
+                    cell.textLabel?.text = "No Rows"
+
+                }
+                
+            }
+            if (segmentedControl.currentSegment == 1){
+                imageView.frame = rect
+                cell.imageView?.image = imageView.image
+                switch indexPath.row {
+                case 0:
+                    cell.textLabel?.text = "Ocean View Mazagan Suite"
+                case 1:
+                    cell.textLabel?.text = "Prime Ocean Mazagan Suite"
+                case 2:
+                    cell.textLabel?.text = "Executive  Suite"
+                case 3:
+                    cell.textLabel?.text = "Ambassadeur Suite"
+                case 4:
+                    cell.textLabel?.text = "Royal Suite"
+                default:
+                    cell.textLabel?.text = "No Rows"
+                    
+                }
+            }
+            
+            
+            return cell
+        }
+        func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+          return 200
+        }
+        
+        
+        override func viewDidAppear(_ animated: Bool) {
+            super.viewDidAppear(animated)
+            
+            // Uncomment the following line to set the current segment programmatically.
+            // segmentedControl.currentSegment = 1
+        }
+        
+        
     }
     
-}
-
-// MARK: - SJFluidSegmentedControl Delegate Methods
-
-extension ViewControllerSegmented: SJFluidSegmentedControlDelegate {
+    // MARK: - SJFluidSegmentedControl Data Source Methods
     
-    func segmentedControl(_ segmentedControl: SJFluidSegmentedControl, didScrollWithXOffset offset: CGFloat) {
+    extension ViewControllerSegmented: SJFluidSegmentedControlDataSource {
         
-        print("Scrolling offset: \(offset)")
+        func numberOfSegmentsInSegmentedControl(_ segmentedControl: SJFluidSegmentedControl) -> Int {
+            return 3
+        }
         
-//        scrollView.contentOffset.x += offset
+        func segmentedControl(_ segmentedControl: SJFluidSegmentedControl,
+                              titleForSegmentAtIndex index: Int) -> String? {
+            
+            if index == 0 {
+                return "Chambre".uppercased()
+            } else if index == 1 {
+                return "Suite".uppercased()
+            }
+            return "Villa".uppercased()
+        }
+        
+        
+        func segmentedControl(_ segmentedControl: SJFluidSegmentedControl, didChangeFromSegmentAtIndex fromIndex: Int, toSegmentAtIndex toIndex: Int) {
+            
+            let offset:CGFloat = UIScreen.main.bounds.size.width * CGFloat(toIndex - fromIndex);
+            
+            scrollView.contentOffset.x += offset
+            
+            //        self.segmentedControl(segmentedControl, didScrollWithXOffset:offset)
+            
+            print ("index is : \(fromIndex) \(toIndex)")
+            self.myTableView?.reloadData()
+            self.myTableView1?.reloadData()
+            
+            
+        }
+        
+        func segmentedControl(_ segmentedControl: SJFluidSegmentedControl,
+                              gradientColorsForSelectedSegmentAtIndex index: Int) -> [UIColor] {
+            switch index {
+            case 0:
+                return [UIColor(red: 51 / 255.0, green: 149 / 255.0, blue: 182 / 255.0, alpha: 1.0),
+                        UIColor(red: 97 / 255.0, green: 199 / 255.0, blue: 234 / 255.0, alpha: 1.0)]
+            case 1:
+                return [UIColor(red: 227 / 255.0, green: 206 / 255.0, blue: 160 / 255.0, alpha: 1.0),
+                        UIColor(red: 225 / 255.0, green: 195 / 255.0, blue: 128 / 255.0, alpha: 1.0)]
+            case 2:
+                return [UIColor(red: 21 / 255.0, green: 94 / 255.0, blue: 119 / 255.0, alpha: 1.0),
+                        UIColor(red: 9 / 255.0, green: 82 / 255.0, blue: 107 / 255.0, alpha: 1.0)]
+            default:
+                break
+            }
+            return [.clear]
+        }
+        
+        func segmentedControl(_ segmentedControl: SJFluidSegmentedControl,
+                              gradientColorsForBounce bounce: SJFluidSegmentedControlBounce) -> [UIColor] {
+            switch bounce {
+            case .left:
+                return [UIColor(red: 51 / 255.0, green: 149 / 255.0, blue: 182 / 255.0, alpha: 1.0)]
+            case .right:
+                return [UIColor(red: 9 / 255.0, green: 82 / 255.0, blue: 107 / 255.0, alpha: 1.0)]
+            }
+        }
+        
+        
+        
+        
     }
     
+    // MARK: - SJFluidSegmentedControl Delegate Methods
+    
+    extension ViewControllerSegmented: SJFluidSegmentedControlDelegate {
+        
+        func segmentedControl(_ segmentedControl: SJFluidSegmentedControl, didScrollWithXOffset offset: CGFloat) {
+            
+            print("Scrolling offset: \(offset)")
+            
+            //        scrollView.contentOffset.x += offset
+        }
+        
+        
+        override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+            let backItem = UIBarButtonItem()
+            backItem.title = "Back"
+            navigationItem.backBarButtonItem = backItem // This will show in the next view controller being pushed
+            
+            
+            
+        }
+
+        
+        
 }
 

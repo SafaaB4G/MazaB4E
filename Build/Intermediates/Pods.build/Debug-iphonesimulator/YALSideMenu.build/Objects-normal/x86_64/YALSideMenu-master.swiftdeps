@@ -1,7 +1,7 @@
-version: "Apple Swift version 3.1 (swiftlang-802.0.48 clang-802.0.38)"
-options: "81af0e6d8aac72341435d79f0ccb2ff7"
-build_time: [544552839, 630066000]
+version: "Apple Swift version 3.1 (swiftlang-802.0.53 clang-802.0.42)"
+options: "f3199753df3c47271539346e30b7e273"
+build_time: [547721667, 129081000]
 inputs:
-  "/Users/nabil/Desktop/Vinci/PFE/MazaganShowCase 2/Pods/YALSideMenu/SideMenu/Menu.swift": [540124571, 0]
-  "/Users/nabil/Desktop/Vinci/PFE/MazaganShowCase 2/Pods/YALSideMenu/SideMenu/MenuItemsAnimator.swift": [540124571, 0]
-  "/Users/nabil/Desktop/Vinci/PFE/MazaganShowCase 2/Pods/YALSideMenu/SideMenu/MenuTransitionAnimator.swift": [540124571, 0]
+  "/Users/nabil/Desktop/Vinci/PFE/MazaB4E/Pods/YALSideMenu/SideMenu/Menu.swift": [546426805, 0]
+  "/Users/nabil/Desktop/Vinci/PFE/MazaB4E/Pods/YALSideMenu/SideMenu/MenuItemsAnimator.swift": [546426805, 0]
+  "/Users/nabil/Desktop/Vinci/PFE/MazaB4E/Pods/YALSideMenu/SideMenu/MenuTransitionAnimator.swift": [546426805, 0]

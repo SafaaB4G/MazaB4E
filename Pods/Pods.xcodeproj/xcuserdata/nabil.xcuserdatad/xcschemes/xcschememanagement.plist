@@ -4,12 +4,32 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
+		<key>ActionButton.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>ITRFlipper.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>Pods-MazaganShowCase.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>Presentr.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>SJFluidSegmentedControl.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>SKPhotoBrowser.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
@@ -22,17 +42,37 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>2893B9AC9CF70B22EEB37A1C03B0B7D2</key>
+		<key>122C4178B16A69A83FF73D9B0F28FAC7</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>3FDB25C518E6407FF634C20F42939222</key>
+		<key>67E4E509534F054C3BCD5B8F9C2DAA9F</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>D6D62C5DD1F006ED73E5191AD10D4B95</key>
+		<key>680B3E0F3B2D87518F1A8BADE82EBA00</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>689EB95D6CEDA1100F7360E686548EFA</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>B5E35A052F9618FADC92799B5153E717</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>C9A8DC2E87D3096A38F820EF72CAC566</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>F8CE732820EDFA61E3B0CBDF14E6CC34</key>
 		<dict>
 			<key>primary</key>
 			<true/>

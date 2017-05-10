@@ -53,6 +53,7 @@ extension MenuViewController {
         let rect = tableView.rectForRow(at: indexPath)
         var point = CGPoint(x: rect.midX, y: rect.midY)
         point = tableView.convert(point, to: nil)
+
         delegate?.menu(self, didSelectItemAt: indexPath.row, at: point)
     }
 }

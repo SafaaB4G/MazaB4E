@@ -6,7 +6,7 @@
 	<dict>
 		<key>Headers/SideMenu-Swift.h</key>
 		<data>
-		JVOppynH9qfqvpuX3nYfV2eF3Nw=
+		gCJqKqyy+3tHTzb8E2rfVtseGuA=
 		</data>
 		<key>Headers/YALSideMenu-umbrella.h</key>
 		<data>
@@ -14,15 +14,15 @@
 		</data>
 		<key>Info.plist</key>
 		<data>
-		oR7zV5/C2cCzWKM9Bm1DVMda6sw=
+		3AwWbxyawSyzql8GKSrUyIrgjQM=
 		</data>
 		<key>Modules/SideMenu.swiftmodule/x86_64.swiftdoc</key>
 		<data>
-		klLa2H+6Zjox/EgZFPHVFRrF4qc=
+		5eDH6A3qMETJxUW8qQXc731X2Ig=
 		</data>
 		<key>Modules/SideMenu.swiftmodule/x86_64.swiftmodule</key>
 		<data>
-		AXD9R5fxYDnO0yzAv/yccGiUCm0=
+		eHfSJmpRDMxgxR2faMUg8kx0Ma4=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -35,11 +35,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			JVOppynH9qfqvpuX3nYfV2eF3Nw=
+			gCJqKqyy+3tHTzb8E2rfVtseGuA=
 			</data>
 			<key>hash2</key>
 			<data>
-			C/Ww6W6C/w2zJ5uzJtOnUKBPxbcvgbpBP22eqeM3aaQ=
+			xfwgRKECmuCs2Qex6PmT7oBm9JBxIxHVrs16tZ8sz88=
 			</data>
 		</dict>
 		<key>Headers/YALSideMenu-umbrella.h</key>
@@ -57,22 +57,22 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			klLa2H+6Zjox/EgZFPHVFRrF4qc=
+			5eDH6A3qMETJxUW8qQXc731X2Ig=
 			</data>
 			<key>hash2</key>
 			<data>
-			oBrhEt8HaMgx1iu4JdRMDnouW/lQLWx/ZkrNqTwfhe4=
+			0JtcLTt71Sa27+kzDGt2otnwfOi0AALP4Ka73RgTc3M=
 			</data>
 		</dict>
 		<key>Modules/SideMenu.swiftmodule/x86_64.swiftmodule</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			AXD9R5fxYDnO0yzAv/yccGiUCm0=
+			eHfSJmpRDMxgxR2faMUg8kx0Ma4=
 			</data>
 			<key>hash2</key>
 			<data>
-			UE+i2GbdXBiRz7ZFQy5JFLn/+eCr32Vjgjoy0bPKByw=
+			aALbvzz6fNJi62QZH+bJBBhY+5RGPn+3vQRYiA+0xMA=
 			</data>
 		</dict>
 		<key>Modules/module.modulemap</key>

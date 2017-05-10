@@ -8,6 +8,17 @@
 
 /* Begin PBXBuildFile section */
 		5833BBD39A133EFBA2B2BE3D /* Pods_MazaganShowCase.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9249916DAEAA6A5F2B103ADE /* Pods_MazaganShowCase.framework */; };
+		BD652E221EAF6529006735D9 /* RestaurationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD652E211EAF6529006735D9 /* RestaurationView.swift */; };
+		BD652E261EAF9B60006735D9 /* HomePageController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD652E251EAF9B60006735D9 /* HomePageController.swift */; };
+		BD652E281EAF9B75006735D9 /* GolfController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD652E271EAF9B75006735D9 /* GolfController.swift */; };
+		BD652E2A1EAF9B87006735D9 /* SpaController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD652E291EAF9B87006735D9 /* SpaController.swift */; };
+		BD652E2C1EAF9BBE006735D9 /* EnfantController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD652E2B1EAF9BBE006735D9 /* EnfantController.swift */; };
+		BD652E2E1EAF9BFE006735D9 /* ActiviteController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD652E2D1EAF9BFE006735D9 /* ActiviteController.swift */; };
+		BD652E301EB20700006735D9 /* sport.html in Resources */ = {isa = PBXBuildFile; fileRef = BD652E2F1EB20700006735D9 /* sport.html */; };
+		BD652E341EB8B3A9006735D9 /* iCarousel.m in Sources */ = {isa = PBXBuildFile; fileRef = BD652E331EB8B3A9006735D9 /* iCarousel.m */; };
+		BD652E361EBA1390006735D9 /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD652E351EBA1390006735D9 /* Utils.swift */; };
+		BD652E571EBB5F9C006735D9 /* restauration.xib in Resources */ = {isa = PBXBuildFile; fileRef = BD652E561EBB5F9C006735D9 /* restauration.xib */; };
+		BD652E5D1EC0CB44006735D9 /* GalleryImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD652E5C1EC0CB44006735D9 /* GalleryImage.swift */; };
 		BDBD55E01E9287C3009C1B25 /* ViewControllerSegmented.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDBD55DF1E9287C3009C1B25 /* ViewControllerSegmented.swift */; };
 		C859D52B1E4F1F99000F351D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C859D52A1E4F1F99000F351D /* AppDelegate.swift */; };
 		C859D52D1E4F1F99000F351D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C859D52C1E4F1F99000F351D /* ViewController.swift */; };
@@ -25,6 +36,19 @@
 /* Begin PBXFileReference section */
 		22FF828F3EEF87D92017E229 /* Pods-MazaganShowCase.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MazaganShowCase.release.xcconfig"; path = "Pods/Target Support Files/Pods-MazaganShowCase/Pods-MazaganShowCase.release.xcconfig"; sourceTree = "<group>"; };
 		9249916DAEAA6A5F2B103ADE /* Pods_MazaganShowCase.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MazaganShowCase.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		BD652E211EAF6529006735D9 /* RestaurationView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RestaurationView.swift; sourceTree = "<group>"; };
+		BD652E251EAF9B60006735D9 /* HomePageController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomePageController.swift; sourceTree = "<group>"; };
+		BD652E271EAF9B75006735D9 /* GolfController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GolfController.swift; sourceTree = "<group>"; };
+		BD652E291EAF9B87006735D9 /* SpaController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SpaController.swift; sourceTree = "<group>"; };
+		BD652E2B1EAF9BBE006735D9 /* EnfantController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EnfantController.swift; sourceTree = "<group>"; };
+		BD652E2D1EAF9BFE006735D9 /* ActiviteController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ActiviteController.swift; sourceTree = "<group>"; };
+		BD652E2F1EB20700006735D9 /* sport.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = sport.html; sourceTree = "<group>"; };
+		BD652E311EB8B39A006735D9 /* MazaganShowCase-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "MazaganShowCase-Bridging-Header.h"; sourceTree = "<group>"; };
+		BD652E321EB8B3A9006735D9 /* iCarousel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = iCarousel.h; sourceTree = "<group>"; };
+		BD652E331EB8B3A9006735D9 /* iCarousel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = iCarousel.m; sourceTree = "<group>"; };
+		BD652E351EBA1390006735D9 /* Utils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Utils.swift; sourceTree = "<group>"; };
+		BD652E561EBB5F9C006735D9 /* restauration.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = restauration.xib; sourceTree = "<group>"; };
+		BD652E5C1EC0CB44006735D9 /* GalleryImage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GalleryImage.swift; sourceTree = "<group>"; };
 		BDBD55DF1E9287C3009C1B25 /* ViewControllerSegmented.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewControllerSegmented.swift; sourceTree = "<group>"; };
 		C859D5271E4F1F99000F351D /* MazaganShowCase.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MazaganShowCase.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C859D52A1E4F1F99000F351D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -100,6 +124,7 @@
 				C859D5311E4F1F99000F351D /* Assets.xcassets */,
 				C859D5331E4F1F99000F351D /* LaunchScreen.storyboard */,
 				C859D5361E4F1F99000F351D /* Info.plist */,
+				BD652E2F1EB20700006735D9 /* sport.html */,
 			);
 			path = MazaganShowCase;
 			sourceTree = "<group>";
@@ -107,10 +132,22 @@
 		C859D53D1E4F3FC1000F351D /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				BD652E321EB8B3A9006735D9 /* iCarousel.h */,
+				BD652E331EB8B3A9006735D9 /* iCarousel.m */,
 				C859D52C1E4F1F99000F351D /* ViewController.swift */,
 				C859D5401E4F40BF000F351D /* MenuViewController.swift */,
 				C859D5481E4F4343000F351D /* ContentViewController.swift */,
 				BDBD55DF1E9287C3009C1B25 /* ViewControllerSegmented.swift */,
+				BD652E211EAF6529006735D9 /* RestaurationView.swift */,
+				BD652E251EAF9B60006735D9 /* HomePageController.swift */,
+				BD652E271EAF9B75006735D9 /* GolfController.swift */,
+				BD652E291EAF9B87006735D9 /* SpaController.swift */,
+				BD652E2B1EAF9BBE006735D9 /* EnfantController.swift */,
+				BD652E2D1EAF9BFE006735D9 /* ActiviteController.swift */,
+				BD652E311EB8B39A006735D9 /* MazaganShowCase-Bridging-Header.h */,
+				BD652E351EBA1390006735D9 /* Utils.swift */,
+				BD652E561EBB5F9C006735D9 /* restauration.xib */,
+				BD652E5C1EC0CB44006735D9 /* GalleryImage.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -168,6 +205,7 @@
 				TargetAttributes = {
 					C859D5261E4F1F99000F351D = {
 						CreatedOnToolsVersion = 8.2.1;
+						LastSwiftMigration = 0830;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -196,8 +234,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				C859D54D1E4F442B000F351D /* Main.storyboard in Resources */,
+				BD652E301EB20700006735D9 /* sport.html in Resources */,
 				C859D5351E4F1F99000F351D /* LaunchScreen.storyboard in Resources */,
 				C859D5321E4F1F99000F351D /* Assets.xcassets in Resources */,
+				BD652E571EBB5F9C006735D9 /* restauration.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -246,7 +286,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -257,14 +297,23 @@
 			buildActionMask = 2147483647;
 			files = (
 				C859D5491E4F4343000F351D /* ContentViewController.swift in Sources */,
+				BD652E2C1EAF9BBE006735D9 /* EnfantController.swift in Sources */,
 				C859D5511E4F44A6000F351D /* CircularRevealAnimator.swift in Sources */,
 				C859D54F1E4F446A000F351D /* CircularRevealTransitionAnimator.swift in Sources */,
 				C859D52D1E4F1F99000F351D /* ViewController.swift in Sources */,
+				BD652E2A1EAF9B87006735D9 /* SpaController.swift in Sources */,
 				C859D5441E4F421F000F351D /* ContentType.swift in Sources */,
 				C859D5531E4F44CB000F351D /* AnimationDelegate.swift in Sources */,
 				C859D52B1E4F1F99000F351D /* AppDelegate.swift in Sources */,
+				BD652E361EBA1390006735D9 /* Utils.swift in Sources */,
+				BD652E221EAF6529006735D9 /* RestaurationView.swift in Sources */,
 				BDBD55E01E9287C3009C1B25 /* ViewControllerSegmented.swift in Sources */,
 				C859D5411E4F40BF000F351D /* MenuViewController.swift in Sources */,
+				BD652E261EAF9B60006735D9 /* HomePageController.swift in Sources */,
+				BD652E5D1EC0CB44006735D9 /* GalleryImage.swift in Sources */,
+				BD652E341EB8B3A9006735D9 /* iCarousel.m in Sources */,
+				BD652E2E1EAF9BFE006735D9 /* ActiviteController.swift in Sources */,
+				BD652E281EAF9B75006735D9 /* GolfController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -388,10 +437,13 @@
 			baseConfigurationReference = D03E09D7460E366852A52122 /* Pods-MazaganShowCase.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = MazaganShowCase/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = B4E.MazaganShowCase;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "MazaganShowCase/Controllers/MazaganShowCase-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -402,10 +454,12 @@
 			baseConfigurationReference = 22FF828F3EEF87D92017E229 /* Pods-MazaganShowCase.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = MazaganShowCase/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = B4E.MazaganShowCase;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "MazaganShowCase/Controllers/MazaganShowCase-Bridging-Header.h";
 				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};

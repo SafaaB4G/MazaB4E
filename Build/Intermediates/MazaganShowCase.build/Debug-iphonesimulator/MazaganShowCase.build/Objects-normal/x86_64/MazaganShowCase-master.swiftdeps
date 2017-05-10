@@ -1,13 +1,21 @@
-version: "Apple Swift version 3.1 (swiftlang-802.0.48 clang-802.0.38)"
-options: "8649b1deabed37e89da60b67c731c954"
-build_time: [544620919, 745205000]
+version: "Apple Swift version 3.1 (swiftlang-802.0.53 clang-802.0.42)"
+options: "18a8dd4a14eae04171d4d17514dc2d0c"
+build_time: [547742375, 197443000]
 inputs:
-  "/Users/nabil/Desktop/Vinci/PFE/MazaganShowCase 2/MazaganShowCase/Controllers/ContentViewController.swift": [540142676, 0]
-  "/Users/nabil/Desktop/Vinci/PFE/MazaganShowCase 2/MazaganShowCase/Misc/CircularRevealAnimator.swift": [540133802, 0]
-  "/Users/nabil/Desktop/Vinci/PFE/MazaganShowCase 2/MazaganShowCase/Misc/CircularRevealTransitionAnimator.swift": [540133749, 0]
-  "/Users/nabil/Desktop/Vinci/PFE/MazaganShowCase 2/MazaganShowCase/Controllers/ViewController.swift": [544542402, 0]
-  "/Users/nabil/Desktop/Vinci/PFE/MazaganShowCase 2/MazaganShowCase/Model/ContentType.swift": [540133174, 0]
-  "/Users/nabil/Desktop/Vinci/PFE/MazaganShowCase 2/MazaganShowCase/Misc/AnimationDelegate.swift": [540133843, 0]
-  "/Users/nabil/Desktop/Vinci/PFE/MazaganShowCase 2/MazaganShowCase/AppDelegate.swift": [544538901, 0]
-  "/Users/nabil/Desktop/Vinci/PFE/MazaganShowCase 2/MazaganShowCase/Controllers/ViewControllerSegmented.swift": [544620719, 0]
-  "/Users/nabil/Desktop/Vinci/PFE/MazaganShowCase 2/MazaganShowCase/Controllers/MenuViewController.swift": [540142798, 0]
+  "/Users/nabil/Desktop/Vinci/PFE/MazaB4E/MazaganShowCase/Controllers/ContentViewController.swift": [546426805, 0]
+  "/Users/nabil/Desktop/Vinci/PFE/MazaB4E/MazaganShowCase/Controllers/EnfantController.swift": [547574128, 0]
+  "/Users/nabil/Desktop/Vinci/PFE/MazaB4E/MazaganShowCase/Misc/CircularRevealAnimator.swift": [546426805, 0]
+  "/Users/nabil/Desktop/Vinci/PFE/MazaB4E/MazaganShowCase/Misc/CircularRevealTransitionAnimator.swift": [546426805, 0]
+  "/Users/nabil/Desktop/Vinci/PFE/MazaB4E/MazaganShowCase/Controllers/ViewController.swift": [547138830, 0]
+  "/Users/nabil/Desktop/Vinci/PFE/MazaB4E/MazaganShowCase/Controllers/SpaController.swift": [547553403, 0]
+  "/Users/nabil/Desktop/Vinci/PFE/MazaB4E/MazaganShowCase/Model/ContentType.swift": [546426805, 0]
+  "/Users/nabil/Desktop/Vinci/PFE/MazaB4E/MazaganShowCase/Misc/AnimationDelegate.swift": [546426805, 0]
+  "/Users/nabil/Desktop/Vinci/PFE/MazaB4E/MazaganShowCase/AppDelegate.swift": [546426805, 0]
+  "/Users/nabil/Desktop/Vinci/PFE/MazaB4E/MazaganShowCase/Controllers/Utils.swift": [547133940, 0]
+  "/Users/nabil/Desktop/Vinci/PFE/MazaB4E/MazaganShowCase/Controllers/RestaurationView.swift": [547742354, 0]
+  "/Users/nabil/Desktop/Vinci/PFE/MazaB4E/MazaganShowCase/Controllers/ViewControllerSegmented.swift": [547739347, 0]
+  "/Users/nabil/Desktop/Vinci/PFE/MazaB4E/MazaganShowCase/Controllers/MenuViewController.swift": [546435848, 0]
+  "/Users/nabil/Desktop/Vinci/PFE/MazaB4E/MazaganShowCase/Controllers/HomePageController.swift": [547553403, 0]
+  "/Users/nabil/Desktop/Vinci/PFE/MazaB4E/MazaganShowCase/Controllers/GalleryImage.swift": [547738837, 0]
+  "/Users/nabil/Desktop/Vinci/PFE/MazaB4E/MazaganShowCase/Controllers/ActiviteController.swift": [547740470, 0]
+  "/Users/nabil/Desktop/Vinci/PFE/MazaB4E/MazaganShowCase/Controllers/GolfController.swift": [547553403, 0]
