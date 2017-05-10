@@ -162,6 +162,7 @@ import ActionButton
         func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
             let storyboard = UIStoryboard(name: "Main", bundle: Bundle.main)
             let destination = storyboard.instantiateViewController(withIdentifier: "GalleryImage") as! GalleryImage
+            
                 switch indexPath.row {
                 case 0:
                     destination.toPass = "http://beyond4edges.com/mazagan/MazaganWebService/public/index.php/Mazagan/GetPhoto/ElJadida"

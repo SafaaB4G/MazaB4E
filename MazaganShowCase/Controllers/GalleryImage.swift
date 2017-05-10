@@ -26,9 +26,9 @@ class GalleryImage: UIViewController ,UICollectionViewDataSource,UICollectionVie
     
     @IBAction func TappedButtom(_ sender: Any) {
         
-        self.dismiss(animated: true, completion: nil )
-    
-    
+        _ = navigationController?.popViewController(animated: true)
+        //self.dismiss(animated: true, completion: nil )
+
     }
     @IBOutlet weak var collectionView: UICollectionView!
     var toPass: String!
@@ -62,7 +62,7 @@ class GalleryImage: UIViewController ,UICollectionViewDataSource,UICollectionVie
             
             print("l'url de la photo finale : \(photo)")
         let photoToShow = SKPhoto.photoWithImageURL(photo)
-        photoToShow.shouldCachePhotoURLImage = false // you can use image cache by true(NSCache)
+        photoToShow.shouldCachePhotoURLImage = true // you can use image cache by true(NSCache)
         images.append(photoToShow)
             print("im in end of the loop ")
 

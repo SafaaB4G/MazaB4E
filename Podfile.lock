@@ -1,15 +1,27 @@
 PODS:
+  - ActionButton (0.1.5)
+  - ITRFlipper (1.0.0)
+  - Presentr (1.2.3)
   - SJFluidSegmentedControl (1.1.1)
+  - SKPhotoBrowser (4.0.1)
   - YALSideMenu (2.0.1)
 
 DEPENDENCIES:
+  - ActionButton
+  - ITRFlipper (~> 1.0.0)
+  - Presentr
   - SJFluidSegmentedControl
+  - SKPhotoBrowser
   - YALSideMenu
 
 SPEC CHECKSUMS:
+  ActionButton: a71147de5a83b6d8d8e18464b216904ba7821677
+  ITRFlipper: dfac7b85cf12ec6bef4edc3f1ae8254c29835505
+  Presentr: a21c7bbb3532c8ff60320e235c0a4869e72f8885
   SJFluidSegmentedControl: ff93f88dc097a0f4b9afd30a6cab6be0dadedf12
+  SKPhotoBrowser: 3a7c6fc02aa1620ab17253a47a49fafda46536e8
   YALSideMenu: 4d6b90ea44dcdded18a99e46b676e4ad51d9c6bb
 
-PODFILE CHECKSUM: 6de618dd80910626c9a1ee33a43452da69f2316e
+PODFILE CHECKSUM: 4751482a6a75815f72c491ae41502cc4d9916c31
 
-COCOAPODS: 1.2.0
+COCOAPODS: 1.2.1

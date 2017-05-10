@@ -74,11 +74,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "MazaganShowCase/Controllers/RestaurationView.swift"
-            timestampString = "516113510.048642"
+            timestampString = "516121918.848724"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "250"
-            endingLineNumber = "250"
+            startingLineNumber = "256"
+            endingLineNumber = "256"
             landmarkName = "view(forPage:in:)"
             landmarkType = "7">
          </BreakpointContent>

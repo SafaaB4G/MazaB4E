@@ -217,10 +217,17 @@ class RestaurationView: UIViewController ,ITRFlipperDataSource{
     
     func imageTapped(tapGestureRecognizer: UITapGestureRecognizer)
     {
-        let tappedImage = tapGestureRecognizer.view as! UIImageView
+        _ = tapGestureRecognizer.view as! UIImageView
         
         print("you tapped me : \(typeMenu)")
         // Your action
+        
+        let storyboard = UIStoryboard(name: "Main", bundle: Bundle.main)
+        let destination = storyboard.instantiateViewController(withIdentifier: "GalleryImage") as! GalleryImage
+        destination.toPass = "http://beyond4edges.com/mazagan/MazaganWebService/public/index.php/Mazagan/GetPhoto/"+typeMenu
+        navigationController?.pushViewController(destination, animated: false)
+        
+        
     }
     
     public func view(forPage page: Int, in flipper: ITRFlipper!) -> UIView!{
@@ -234,9 +241,8 @@ class RestaurationView: UIViewController ,ITRFlipperDataSource{
         image.frame = imageFrame
         //the buttom
         let buttom :UIButton = UIButton()
-        let buttomFrame : CGRect = CGRect(x:0,y:0,width:UIScreen.main.bounds.width,height:100)
+        let buttomFrame : CGRect = CGRect(x:0,y:20,width:UIScreen.main.bounds.width,height:100)
         buttom.frame = buttomFrame
-        buttom.backgroundColor = UIColor.gray
         buttom.setTitle("RESTAURATION", for: .normal)
         buttom.setTitleColor(UIColor.brown , for: .normal)
         
@@ -253,14 +259,12 @@ class RestaurationView: UIViewController ,ITRFlipperDataSource{
         labelDescription.frame = descriptionMenuFrame
         labelDescription.textColor = UIColor.red
         labelDescription.numberOfLines = 20
-        labelDescription.backgroundColor = UIColor.purple
         
         //styling the name menu
         let menuName : UILabel = UILabel()
         menuName.textColor = UIColor.brown
         
         menuName.frame = titreMenuFrame
-        menuName.backgroundColor = UIColor.blue
 
         //add the action for the uimage :
         let tapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector
