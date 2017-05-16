@@ -9,6 +9,11 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>HDAugmentedReality.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>ITRFlipper.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -42,7 +47,12 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>122C4178B16A69A83FF73D9B0F28FAC7</key>
+		<key>382C7D67433438B0C53590FA15DA83C6</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>605F72A9CD2B98E8CBA8D4C65CD301DA</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -57,22 +67,22 @@
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>689EB95D6CEDA1100F7360E686548EFA</key>
+		<key>BC21DF071D4DB568112099E0BAA2206E</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>B5E35A052F9618FADC92799B5153E717</key>
+		<key>E010F5DACF6C2678A8C11473776D9855</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>C9A8DC2E87D3096A38F820EF72CAC566</key>
+		<key>E6B5F4B45CC1868245E8B1F98C8A192B</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>F8CE732820EDFA61E3B0CBDF14E6CC34</key>
+		<key>FAF8FFD346C5D831C4AA4CFD61E645D6</key>
 		<dict>
 			<key>primary</key>
 			<true/>

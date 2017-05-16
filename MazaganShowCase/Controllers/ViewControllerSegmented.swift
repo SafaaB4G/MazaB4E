@@ -34,7 +34,7 @@
             let resp = Utils.getSyncDataFromUrl(url: "http://www.beyond4edges.com/mazagan/MazaganWebService/public/index.php/Mazagan/GetDescription/villa", httpMethod: "GET", parameter: "") as! NSArray
             if(resp != nil){
             let villaMenu : NSDictionary = resp[0] as! NSDictionary
-            descriptinvilla = String (describing:villaMenu["description"])
+            descriptinvilla = villaMenu["description"] as? String 
             
             }
             else{
@@ -131,21 +131,33 @@
             if (actualTable == "Chambre"){
                 switch indexPath.row {
                 case 0:
+                    destination.TypeHebergement = "http://beyond4edges.com/mazagan/MazaganWebService/public/index.php/Mazagan/GetDescription/PoolViewRoom"
+                    
                     destination.toPass = "http://beyond4edges.com/mazagan/MazaganWebService/public/index.php/Mazagan/GetPhoto/PoolViewRoom"
-                    //navigationController?.pushViewController(destination, animated: true)
-                    present(destination, animated: true, completion: nil)
+                    navigationController?.pushViewController(destination, animated: true)
                     break
                 case 1:
+                    destination.TypeHebergement = "http://beyond4edges.com/mazagan/MazaganWebService/public/index.php/Mazagan/GetDescription/PartialOceanViewRoom"
+                    
                     destination.toPass = "http://beyond4edges.com/mazagan/MazaganWebService/public/index.php/Mazagan/GetPhoto/PartialOceanViewRoom"
                     navigationController?.pushViewController(destination, animated: true)
                     break
                 case 2:
+                     destination.TypeHebergement = "http://beyond4edges.com/mazagan/MazaganWebService/public/index.php/Mazagan/GetDescription/OceanViewRoom"
+                     
                     destination.toPass = "http://beyond4edges.com/mazagan/MazaganWebService/public/index.php/Mazagan/GetPhoto/OceanViewRoom"
+                     
                     navigationController?.pushViewController(destination, animated: true)
                     break
                 case 3:
+                    destination.TypeHebergement = "http://beyond4edges.com/mazagan/MazaganWebService/public/index.php/Mazagan/GetDescription/PrimeOceanViewRoom"
+                    
+
+                    
+                    destination.toPass = "http://beyond4edges.com/mazagan/MazaganWebService/public/index.php/Mazagan/GetPhoto/PrimeOceanViewRoom"
+                    
                     navigationController?.pushViewController(destination, animated: true)
-                   destination.toPass = "http://beyond4edges.com/mazagan/MazaganWebService/public/index.php/Mazagan/GetPhoto/PrimeOceanViewRoom"
+                   
                     break
                 
                     
@@ -159,23 +171,36 @@
             {
                 switch indexPath.row {
                 case 0:
+                    destination.TypeHebergement = "http://beyond4edges.com/mazagan/MazaganWebService/public/index.php/Mazagan/GetDescription/OceanViewMazaganSuite"
+                    
                     destination.toPass = "http://beyond4edges.com/mazagan/MazaganWebService/public/index.php/Mazagan/GetPhoto/OceanViewMazaganSuite"
                     navigationController?.pushViewController(destination, animated: true)
                     break
                 case 1:
+                    
+                    destination.TypeHebergement = "http://beyond4edges.com/mazagan/MazaganWebService/public/index.php/Mazagan/GetDescription/PrimeOceanMazaganSuite"
+                    
                      destination.toPass = "http://beyond4edges.com/mazagan/MazaganWebService/public/index.php/Mazagan/GetPhoto/PrimeOceanMazaganSuite"
+                    
                     navigationController?.pushViewController(destination, animated: true)
                     break
                 case 2:
+                     destination.TypeHebergement = "http://beyond4edges.com/mazagan/MazaganWebService/public/index.php/Mazagan/GetDescription/ExecutiveSuite"
+                    
                     destination.toPass = "http://beyond4edges.com/mazagan/MazaganWebService/public/index.php/Mazagan/GetPhoto/ExecutiveSuite"
                     navigationController?.pushViewController(destination, animated: true)
                     break
                 case 3:
+                    destination.TypeHebergement = "http://beyond4edges.com/mazagan/MazaganWebService/public/index.php/Mazagan/GetDescription/ExecutiveSuite"
+                    
                     destination.toPass = "http://beyond4edges.com/mazagan/MazaganWebService/public/index.php/Mazagan/GetPhoto/AmbassadorSuite"
                     navigationController?.pushViewController(destination, animated: true)
                     break
                     
                 case 4:
+                    destination.TypeHebergement = "http://beyond4edges.com/mazagan/MazaganWebService/public/index.php/Mazagan/GetDescription/RoyalSuite"
+                    
+
                     destination.toPass = "http://beyond4edges.com/mazagan/MazaganWebService/public/index.php/Mazagan/GetPhoto/RoyalSuite"
                     navigationController?.pushViewController(destination, animated: true)
                     break

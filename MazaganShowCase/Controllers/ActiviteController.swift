@@ -2,6 +2,7 @@ import Foundation
 import UIKit
 import SJFluidSegmentedControl
 import ActionButton
+import Presentr
     class ActiviteController: UIViewController ,UITableViewDataSource, UITableViewDelegate , UIWebViewDelegate{
         
         // MARK: - Outlets
@@ -103,15 +104,65 @@ import ActionButton
             self.scrollView.addSubview(myView2!)
             
             //the code of floating buttom
+            
+            //first is to call the web service 
+            let respOfExcursionDescription = Utils.getSyncDataFromUrl(url: "http://www.beyond4edges.com/mazagan/MazaganWebService/public/index.php/Mazagan/GetDescription/Excursions", httpMethod: "GET", parameter: "") as! NSArray
+            let one : NSDictionary = respOfExcursionDescription[0] as! NSDictionary
+            
+            // create the flaoting button and fill it 
+            
             let twitterImage = UIImage(named: "logoMazagan")!
             let plusImage = UIImage(named: "logoMazagan")!
+            let Excursion = ActionButtonItem(title: "Excursion", image: twitterImage)
             
-            let twitter = ActionButtonItem(title: "Twitter", image: twitterImage)
+            //dialog of excursion
+            Excursion.action = { item in
+                let presenter: Presentr = {
+                    let width = ModalSize.fluid(percentage: 0.80)
+                    let height = ModalSize.fluid(percentage: 0.20)
+                    let
+                    center = ModalCenterPosition.customOrigin(origin: CGPoint(x:100, y: 100))
+                    
+                    let customType = PresentationType.custom(width: width, height: height, center: center)
+                    
+                    let presenter = Presentr(presentationType: customType)
+                    presenter.transitionType = .coverHorizontalFromRight
+                    presenter.dismissTransitionType = .crossDissolve
+                    presenter.roundCorners = false
+                    presenter.backgroundColor = .clear
+                    presenter.backgroundOpacity = 0.5
+                    presenter.dismissOnSwipe = true
+                    presenter.dismissOnSwipeDirection = .top
+                    return presenter
+                }()
+                
+                
+                
+                //calling the dialog :
+                //first create the dialogcontoroller :
+                
+                var alertController: AlertViewController {
+                    let alertController = Presentr.alertViewController(title: "Excursion", body: self.description)
+                    
+                    let okAction = AlertAction(title: "Read IT! 🤘", style: .destructive) { alert in
+                        print("OK!!")
+                    }
+                    alertController.addAction(okAction)
+                    return alertController
+                }
+                
+                presenter.viewControllerForContext = self
+                
+                presenter.shouldIgnoreTapOutsideContext = true
+                
+                self.customPresentViewController(presenter, viewController: alertController, animated: true, completion: nil)
+                
+            }
             
-            let google = ActionButtonItem(title: "Google Plus", image: plusImage)
-            google.action = { item in print("Google Plus...") }
             
-            actionButton = ActionButton(attachedToView: self.view, items: [twitter, google])
+            
+            
+            actionButton = ActionButton(attachedToView: self.view, items: [Excursion])
             actionButton.action = { button in button.toggleMenu() }
             actionButton.setTitle("+", forState: UIControlState())
             
@@ -165,28 +216,42 @@ import ActionButton
             
                 switch indexPath.row {
                 case 0:
+                    destination.TypeHebergement = "http://beyond4edges.com/mazagan/MazaganWebService/public/index.php/Mazagan/GetDescription/ElJadida"
+                    
                     destination.toPass = "http://beyond4edges.com/mazagan/MazaganWebService/public/index.php/Mazagan/GetPhoto/ElJadida"
-                    present(destination, animated: true, completion: nil)
+                    navigationController?.pushViewController(destination, animated: true)
                     break
                 case 1:
+                    destination.TypeHebergement = "http://beyond4edges.com/mazagan/MazaganWebService/public/index.php/Mazagan/GetDescription/azemmour"
+                    
                     destination.toPass = "http://beyond4edges.com/mazagan/MazaganWebService/public/index.php/Mazagan/GetPhoto/azemmour"
-                    present(destination, animated: true, completion: nil)
+                    navigationController?.pushViewController(destination, animated: true)
                     break
                 case 2:
+                    destination.toPass = "http://beyond4edges.com/mazagan/MazaganWebService/public/index.php/Mazagan/GetPhoto/oualidia"
                     destination.toPass = "http://beyond4edges.com/mazagan/MazaganWebService/public/index.php/Mazagan/GetPhoto/oualidia"
                     navigationController?.pushViewController(destination, animated: true)
                     break
                 case 3:
-                    navigationController?.pushViewController(destination, animated: true)
                     destination.toPass = "http://beyond4edges.com/mazagan/MazaganWebService/public/index.php/Mazagan/GetPhoto/casablanca"
+                    
+                    destination.toPass = "http://beyond4edges.com/mazagan/MazaganWebService/public/index.php/Mazagan/GetPhoto/casablanca"
+                    navigationController?.pushViewController(destination, animated: true)
+
                     break
                 case 4:
-                    navigationController?.pushViewController(destination, animated: true)
                     destination.toPass = "http://beyond4edges.com/mazagan/MazaganWebService/public/index.php/Mazagan/GetPhoto/marrakech"
+                    
+                    destination.toPass = "http://beyond4edges.com/mazagan/MazaganWebService/public/index.php/Mazagan/GetPhoto/marrakech"
+                    navigationController?.pushViewController(destination, animated: true)
+
                     break
                 case 5:
-                    navigationController?.pushViewController(destination, animated: true)
+                    destination.toPass = "http://beyond4edges.com/mazagan/MazaganWebService/public/index.php/Mazagan/GetPhoto/rabat"
+                    
                     destination.toPass = "http://www.beyond4edges.com/mazagan/MazaganWebService/public/index.php/Mazagan/GetPhoto/rabat"
+                    navigationController?.pushViewController(destination, animated: true)
+
                     break
                     
                     

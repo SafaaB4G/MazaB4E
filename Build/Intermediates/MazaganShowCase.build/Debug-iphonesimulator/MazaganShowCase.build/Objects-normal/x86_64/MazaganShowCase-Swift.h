@@ -294,6 +294,9 @@ SWIFT_CLASS("_TtC15MazaganShowCase12GalleryImage")
 @interface GalleryImage : UIViewController <UIScrollViewDelegate, UICollectionViewDelegate, SKPhotoBrowserDelegate, UICollectionViewDataSource>
 @property (nonatomic, strong) IBOutlet UIButton * _Null_unspecified ButtomBack;
 - (IBAction)TappedButtom:(id _Nonnull)sender;
+@property (nonatomic, copy) NSString * _Null_unspecified TypeHebergement;
+@property (nonatomic, copy) NSString * _Null_unspecified urlDesc;
+@property (nonatomic, strong) ActionButton * _Null_unspecified actionButton;
 @property (nonatomic, weak) IBOutlet UICollectionView * _Null_unspecified collectionView;
 @property (nonatomic, copy) NSString * _Null_unspecified toPass;
 @property (nonatomic, copy) NSArray<id <SKPhotoProtocol>> * _Nonnull images;

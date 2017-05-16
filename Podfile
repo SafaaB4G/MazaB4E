@@ -13,4 +13,5 @@ target 'MazaganShowCase' do
     pod 'ITRFlipper', '~> 1.0.0'
     pod 'Presentr'
     pod 'SKPhotoBrowser'
+    pod 'HDAugmentedReality', '~> 2.0'
 end

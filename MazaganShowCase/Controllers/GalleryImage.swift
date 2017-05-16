@@ -19,7 +19,8 @@ import Foundation
 import UIKit
 import SJFluidSegmentedControl
 import SKPhotoBrowser
-
+import Presentr
+import ActionButton
 class GalleryImage: UIViewController ,UICollectionViewDataSource,UICollectionViewDelegate,SKPhotoBrowserDelegate{
     
     @IBOutlet var ButtomBack: UIButton!
@@ -30,6 +31,12 @@ class GalleryImage: UIViewController ,UICollectionViewDataSource,UICollectionVie
         //self.dismiss(animated: true, completion: nil )
 
     }
+    
+    var TypeHebergement: String!
+    var urlDesc: String!
+    
+    var actionButton: ActionButton!
+    
     @IBOutlet weak var collectionView: UICollectionView!
     var toPass: String!
     var images = [SKPhotoProtocol]()
@@ -80,6 +87,86 @@ class GalleryImage: UIViewController ,UICollectionViewDataSource,UICollectionVie
         setupCollectionView()
         self.view.backgroundColor = UIColor.clear
         
+        if (TypeHebergement != nil){
+        //to show the description in the floating button (dans ce cas les lien des chambre et suite)
+        print("l'url passe est :\(TypeHebergement)")
+        let respDesc = Utils.getSyncDataFromUrl(url: TypeHebergement, httpMethod: "GET", parameter: "") as! NSArray
+        
+        
+            
+            
+        print("The response is :\(respDesc.count)")
+        
+        for var i in (0..<respDesc.count)
+        {
+            print("im in the loop : the response here is : \(respDesc)")
+            
+            let DesecResponse : NSDictionary = respDesc[i] as! NSDictionary
+            urlDesc = DesecResponse["description"] as! String
+            
+            
+            
+        }
+        
+        
+        
+        
+        let plusImage = UIImage(named: "logoMazagan")!
+        
+        let typeHebergement = ActionButtonItem(title: "Description", image: plusImage)
+        
+        
+        
+        
+        typeHebergement.action = { item in
+            let presenter: Presentr = {
+                let width = ModalSize.fluid(percentage: 0.80)
+                let height = ModalSize.fluid(percentage: 0.20)
+                let
+                center = ModalCenterPosition.customOrigin(origin: CGPoint(x:100, y: 100))
+                
+                let customType = PresentationType.custom(width: width, height: height, center: center)
+                
+                let presenter = Presentr(presentationType: customType)
+                presenter.transitionType = .coverHorizontalFromRight
+                presenter.dismissTransitionType = .crossDissolve
+                presenter.roundCorners = false
+                presenter.backgroundColor = .clear
+                presenter.backgroundOpacity = 0.5
+                presenter.dismissOnSwipe = true
+                presenter.dismissOnSwipeDirection = .top
+                return presenter
+                
+                
+            }()
+            
+            
+            
+            
+            
+            var alertController: AlertViewController {
+                let alertController = Presentr.alertViewController(title: "Hébergement", body: self.urlDesc!)
+                
+                let okAction = AlertAction(title: "Read IT! 🤘", style: .destructive) { alert in
+                    print("OK!!")
+                }
+                alertController.addAction(okAction)
+                return alertController
+            }
+            
+            presenter.viewControllerForContext = self
+            
+            presenter.shouldIgnoreTapOutsideContext = true
+            
+            self.customPresentViewController(presenter, viewController: alertController, animated: true, completion: nil)
+            
+        }
+        actionButton = ActionButton(attachedToView: self.view, items: [ typeHebergement])
+        actionButton.action = { button in button.toggleMenu() }
+        actionButton.setTitle("+", forState: UIControlState())
+        
+        actionButton.backgroundColor = UIColor(red: 238.0/255.0, green: 130.0/255.0, blue: 34.0/255.0, alpha:1.0)
+        }
     }
     
     override func didReceiveMemoryWarning() {

@@ -31,6 +31,33 @@
     },
     {
       'type': 'directory',
+      'name': "/Users/nabil/Desktop/Vinci/PFE/MazaB4E/Build/Products/Debug-iphonesimulator/HDAugmentedReality/HDAugmentedReality.framework/Headers",
+      'contents': [
+        {
+          'type': 'file',
+          'name': "HDAugmentedReality-Swift.h",
+          'external-contents': "/Users/nabil/Desktop/Vinci/PFE/MazaB4E/Build/Products/Debug-iphonesimulator/HDAugmentedReality/HDAugmentedReality.framework/Headers/HDAugmentedReality-Swift.h"
+        },
+        {
+          'type': 'file',
+          'name': "HDAugmentedReality-umbrella.h",
+          'external-contents': "/Users/nabil/Desktop/Vinci/PFE/MazaB4E/Pods/Target Support Files/HDAugmentedReality/HDAugmentedReality-umbrella.h"
+        }
+      ]
+    },
+    {
+      'type': 'directory',
+      'name': "/Users/nabil/Desktop/Vinci/PFE/MazaB4E/Build/Products/Debug-iphonesimulator/HDAugmentedReality/HDAugmentedReality.framework/Modules",
+      'contents': [
+        {
+          'type': 'file',
+          'name': "module.modulemap",
+          'external-contents': "/Users/nabil/Desktop/Vinci/PFE/MazaB4E/Build/Intermediates/Pods.build/Debug-iphonesimulator/HDAugmentedReality.build/module.modulemap"
+        }
+      ]
+    },
+    {
+      'type': 'directory',
       'name': "/Users/nabil/Desktop/Vinci/PFE/MazaB4E/Build/Products/Debug-iphonesimulator/ITRFlipper/ITRFlipper.framework/Headers",
       'contents': [
         {

@@ -33,16 +33,17 @@ class HomePageController: UIViewController,iCarouselDataSource, iCarouselDelegat
         myViewCarousel.backgroundColor = UIColor.gray
         
         //the code of floating buttom 
-        let twitterImage = UIImage(named: "logoMazagan")!
-        let plusImage = UIImage(named: "logoMazagan")!
-        
-        let twitter = ActionButtonItem(title: "Twitter", image: twitterImage)
+//        let twitterImage = UIImage(named: "logoMazagan")!
+//
+//        let twitter = ActionButtonItem(title: "Twitter", image: twitterImage)
         //twitter.action = { item in self.test() }
         
-        let google = ActionButtonItem(title: "Google Plus", image: plusImage)
-        google.action = { item in print("Google Plus...") }
+        let plusImage = UIImage(named: "logoMazagan")!
+
+        let google = ActionButtonItem(title: "Show The Map", image: plusImage)
+        google.action = { item in print("here we will present to next controller ") }
         
-        actionButton = ActionButton(attachedToView: self.view, items: [twitter, google])
+        actionButton = ActionButton(attachedToView: self.view, items: [google])
         actionButton.action = { button in button.toggleMenu() }
         actionButton.setTitle("+", forState: UIControlState())
         

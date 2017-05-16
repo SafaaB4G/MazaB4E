@@ -90,6 +90,7 @@ strip_invalid_archs() {
 
 if [[ "$CONFIGURATION" == "Debug" ]]; then
   install_framework "$BUILT_PRODUCTS_DIR/ActionButton/ActionButton.framework"
+  install_framework "$BUILT_PRODUCTS_DIR/HDAugmentedReality/HDAugmentedReality.framework"
   install_framework "$BUILT_PRODUCTS_DIR/ITRFlipper/ITRFlipper.framework"
   install_framework "$BUILT_PRODUCTS_DIR/Presentr/Presentr.framework"
   install_framework "$BUILT_PRODUCTS_DIR/SJFluidSegmentedControl/SJFluidSegmentedControl.framework"
@@ -98,6 +99,7 @@ if [[ "$CONFIGURATION" == "Debug" ]]; then
 fi
 if [[ "$CONFIGURATION" == "Release" ]]; then
   install_framework "$BUILT_PRODUCTS_DIR/ActionButton/ActionButton.framework"
+  install_framework "$BUILT_PRODUCTS_DIR/HDAugmentedReality/HDAugmentedReality.framework"
   install_framework "$BUILT_PRODUCTS_DIR/ITRFlipper/ITRFlipper.framework"
   install_framework "$BUILT_PRODUCTS_DIR/Presentr/Presentr.framework"
   install_framework "$BUILT_PRODUCTS_DIR/SJFluidSegmentedControl/SJFluidSegmentedControl.framework"
